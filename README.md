@@ -1,6 +1,8 @@
 # Puzzlefy
 Generate a puzzle from any image. Made with [p5.js](https://p5js.org/).
 
+![](https://media.discordapp.net/attachments/791477811981844523/902970826641522688/ezgif.com-gif-maker.gif)
+
 |<img src=https://github.com/Rush/Font-Awesome-SVG-PNG/blob/master/black/svg/globe.svg height=14> [Website](https://puzzlefy.netlify.app) | <img src=https://github.com/Rush/Font-Awesome-SVG-PNG/blob/master/black/svg/twitter.svg height=14> [Twitter](https://twitter.com/Puzzle_fy)|
 |---|---|
 
