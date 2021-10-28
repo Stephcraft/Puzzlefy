@@ -1,0 +1,269 @@
+html, body {
+    margin: 0px;
+    height: 100vh;
+    overflow: hidden;
+    font-family: Arial;
+}
+
+body {
+	position: relative;
+	touch-action: none;
+}
+
+canvas {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+}
+
+.ui {
+    position: absolute;
+    transition: .25s all;
+	z-index: 10;
+}
+
+.disabled {
+    pointer-events: none;
+    display: none;
+    opacity: 0;
+}
+
+.disabled * {
+    display: none;
+}
+
+.ui-container {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ui-popup-container {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .25);
+    transition: 1s all;
+}
+
+button[type="button"] {
+    color: white;
+    background: black;
+    padding: 8px 25px;
+    border-radius: 200px;
+    border: none;
+    cursor: pointer;
+    transition: .25s all;
+
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+  	user-select: none; /* Standard syntax */
+}
+
+.functionality {
+    display: flex;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: black;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: .25s all;
+	margin-top: 10px;
+}
+
+.functionality:hover, button[type="button"]:hover {
+    background: #555;
+    transition: .10s all;
+}
+
+.functionality:active, button[type="button"]:active {
+    background: #999;
+}
+
+/* popup */
+
+.ui-popup {
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+	max-width: 400px;
+    transform: translateY(0px);
+    transition: all .5s;
+}
+
+.section {
+	margin: 25px;
+}
+
+.section.container {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+
+#zombiecraft {
+	background-color: black;
+	background-image: url(https://zc.stephcraft.net/assets/image/header.png);
+	background-size: cover;
+	background-position: center;
+	color: white;
+	padding: 15px 15px;
+}
+
+#zombiecraft div {
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+  	user-select: none; /* Standard syntax */
+}
+
+#zombiecraft p {
+	font-family: Minecraftia;
+	font-size: .75em;
+}
+
+h2 {
+	margin: 0px;
+	margin-bottom: 1em;
+}
+
+input {
+	border: none;
+	border-bottom: 1px solid black;
+	outline: none;
+}
+
+input#url {
+	user-select: all;
+}
+
+input#cols, input#rows {
+	position: relative;
+	width: 50px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button[type="button"].copy {
+	padding: 8px 9px;
+}
+
+button[type="button"].twitter {
+	padding: 8px 9px;
+}
+
+.twitter {
+	background: #1DA1F2 !important;
+}
+
+.twitter:hover {
+	background: #60b7ee !important;
+}
+
+.twitter:active {
+	background: rgb(153, 208, 243) !important;
+}
+
+button[type="button"].discord {
+	padding: 8px 8px;
+}
+
+button[type="button"].discord {
+	background: #5865F2;
+}
+
+button[type="button"].discord:hover {
+	background: #858ef0;
+}
+
+button[type="button"].discord:active {
+	background: #a6abe7;
+}
+
+a {
+	color: #4286f4;
+    text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* tooltip */
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-content {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0,0,0,.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: calc(25% + 3px);
+    right: 120%;
+}
+
+.tooltip .tooltip-content::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgba(0,0,0,.75);
+}
+.tooltip:hover .tooltip-content {
+    visibility: visible;
+}
+
+/* touch screen */
+
+@media (hover: none) {
+	.tooltip .tooltip-content {
+		display: none;
+  	}
+
+	.functionality:hover, input[type="button"]:hover,
+	.functionality:active, input[type="button"]:active {
+		background: black;
+	}
+}
+
+@font-face {
+    font-family: Minecraftia;
+    src: url(fonts/Minecraftia.ttf);
+}

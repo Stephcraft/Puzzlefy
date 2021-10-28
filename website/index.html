@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Puzzle</title>
+
+	<!-- responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<!-- meta -->
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+	<meta name="title" content="Puzzlefy">
+	<meta name="description" content="Solve and share puzzles to your friends!">
+	<meta name="keywords" content="puzzle, jigsaw, p5js, puzzlefy, puzzlify, image to puzzle, image to jigsaw">
+
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="puzzlefy.netlify.app">
+	<meta property="og:url" content="https://puzzlefy.netlify.app">
+	<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/f/fe/Puzzle.jpg">
+	<meta property="og:title" content="Puzzlefy">
+	<meta property="og:description" content="Solve and share puzzles with your friends!">
+
+	<script src=meta.js></script>
+
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- icons -->
+	<script src="https://kit.fontawesome.com/d86c5c458d.js" crossorigin="anonymous"></script>
+</head>
+<body touch-action=none unresolved>
+	<div class="ui disabled">
+
+		<!-- ending -->
+		<div class="ui-popup-container disabled">
+			<div class=ui-popup>
+				<div class=section>
+					<h1>Thank you for playing!</h1>
+					<p>Follow <a href="https://twitter.com/Puzzle_fy" target=_blank>@Puzzle_fy</a> on twitter</p>
+				</div>
+				<div class="section container">
+					<h2>Generate your puzzle</h2>
+					<!--<p>Make your own puzzle and share it with your friends!</p>-->
+					<input type="text" placeholder="Image link" id=url> <input type="number" placeholder="Width" min=0 id=cols> x <input type="number" placeholder="Height" min=0 id=rows>
+					<br><br>
+					<div>
+						<button type="button" onclick="window.location.href = generate()">Generate</button>
+						<button type="button" class=copy onclick="copyGenerate()"><i class="fas fa-copy"></i></button>
+						<button type="button" class=twitter onclick="shareGenerate()"><i class="fab fa-twitter"></i></button>
+					</div>
+				</div>
+				<div id=zombiecraft>
+					<img src=https://zc.stephcraft.net/assets/image/zombiecraft-logo.png>
+					<p>Do you like Minecraft and Call of Duty zombies? If so, then join this epic Minecraft server without any mods!</p>
+					<div>
+						<a href="https://zc.stephcraft.net" target=_blank><button type="button">Visit website <i class="fas fa-external-link-alt"></i></button></a>
+						<a href="https://discord.gg/T8cygSv" target=_blank><button type="button" class=discord><i class="fab fa-discord"></i></button></a>
+						<a href="https://zc.stephcraft.net/twitter" target=_blank><button type="button" class=twitter><i class="fab fa-twitter"></i></button></a>
+					</div>
+				</div>
+				<div class=section>
+					<a id=again><button type="button">Play again</button></a>
+					<a id=share target=_blank><button type="button" class=twitter><i class="fab fa-twitter"></i></button></a>
+				</div>
+			</div>
+		</div>
+
+		<!-- follow, share, (generate, share), (zombiecraft link, discord), play again -->
+
+		<!-- functionalities -->
+		<div class=ui-container>
+			<div class=tooltip>
+				<span class=tooltip-content>Preview</span>
+				<div class=functionality onclick="hint()">
+					<i class="fas fa-eye"></i>
+				</div>
+			</div>
+			<div class=tooltip>
+				<span class=tooltip-content>Verify</span>
+				<div class=functionality onclick="verify()">
+					<i class="fas fa-check"></i>
+				</div>
+			</div>
+			<div class=tooltip>
+				<span class=tooltip-content>Fullscreen</span>
+				<div class=functionality onclick="toggleFullscreen(this)">
+					<i class="fas fa-expand"></i>
+				</div>
+			</div>
+			<!-- cheated -->
+			<div class=tooltip>
+				<span class=tooltip-content>Reset</span>
+				<div class=functionality onclick="reset()" style=display:none>
+					<i class="fas fa-undo"></i>
+				</div>
+			</div>
+			<div class=tooltip>
+				<span class=tooltip-content>Solve</span>
+				<div class=functionality onclick="solve()" style=display:none>
+					<i class="fas fa-puzzle-piece"></i>
+				</div>
+			</div>
+			<!-- social -->
+			<div class=tooltip>
+				<span class=tooltip-content>Share</span>
+				<div class="functionality twitter" onclick="share()">
+					<i class="fab fa-twitter"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+	<script src=plugins/transform.js></script>
+	<script src=plugins/cors.js></script>
+	<script src=jigsaw.js></script>
+	<script src=script.js></script>
+</body>
+</html>
