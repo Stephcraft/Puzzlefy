@@ -83,7 +83,7 @@ function start() {
         aspect = { x: 4, y: 4 }
     while(aspect.x * aspect.y >= 50)
         aspect = { x: parseInt(aspect.x/2), y: parseInt(aspect.y/2) }
-    if(aspect.x * aspect.y <= 9)
+    while(aspect.x * aspect.y <= 9)
         aspect = { x: parseInt(aspect.x*2), y: parseInt(aspect.y*2) }
 
     cols = params.get('cols') > 0 ? params.get('cols') : aspect.x
