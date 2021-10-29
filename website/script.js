@@ -81,10 +81,10 @@ function start() {
     // simplify aspect for undefined cols & rows
     if(aspect.x == 1 && aspect.y == 1)
         aspect = { x: 4, y: 4 }
-    if(aspect.x * aspect.y <= 9)
-        aspect = { x: parseInt(aspect.x*2), y: parseInt(aspect.y*2) }
     while(aspect.x * aspect.y >= 50)
         aspect = { x: parseInt(aspect.x/2), y: parseInt(aspect.y/2) }
+    if(aspect.x * aspect.y <= 9)
+        aspect = { x: parseInt(aspect.x*2), y: parseInt(aspect.y*2) }
 
     cols = params.get('cols') > 0 ? params.get('cols') : aspect.x
     rows = params.get('rows') > 0 ? params.get('rows') : aspect.y
