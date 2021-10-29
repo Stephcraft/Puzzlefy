@@ -151,7 +151,7 @@ function start() {
                 pg.image(tile.jigsaw, x * tiles.sizeX, y * tiles.sizeY)
             }
         }
-        return pg.get()
+        return imagify(pg)
     })()
 
     console.log('pieces: ', millis() - prev)

@@ -113,7 +113,7 @@ function puzzleify(tiles) {
                         drawPuzzleSideMask(pg, BOTTOM, bottomCurve, w, h)
                         drawPuzzleSideMask(pg, LEFT, leftCurve, w, h)
                         drawPuzzleSideMask(pg, RIGHT, rightCurve, w, h)
-                        return maskify(pg.get())
+                        return maskify(imagify(pg))
                     })()
     
                     // jigsaw outline
@@ -124,14 +124,14 @@ function puzzleify(tiles) {
                         drawPuzzleSide(pg, BOTTOM, bottomCurve, w, h)
                         drawPuzzleSide(pg, LEFT, leftCurve, w, h)
                         drawPuzzleSide(pg, RIGHT, rightCurve, w, h)
-                        return pg.get()
+                        return imagify(pg)
                     })()
         
                     // jigsaw fill
                     var jigsawFill = (() => {
                         var pg = createGraphics(w*2, h*2)
                         pg.background(Theme.board_fill)
-                        var img = pg.get()
+                        var img = imagify(pg)
                         img.mask(mask)
                         return img
                     })()
@@ -166,6 +166,12 @@ function maskify(img) {
     }
     img.updatePixels();
 
+    return img
+}
+
+function imagify(pg) {
+    var img = pg.get()
+    pg.remove()
     return img
 }
 
