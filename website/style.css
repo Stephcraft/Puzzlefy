@@ -45,6 +45,7 @@ canvas {
     margin-bottom: 15px;
     display: flex;
     flex-direction: column;
+    transition: .25s all;
 }
 
 .ui-popup-container {
