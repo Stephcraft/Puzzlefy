@@ -215,7 +215,7 @@ function cut(img, cols, rows, alignX, alignY) {
     // will need to capture beyond the image dimensions
     var pg = createGraphics(img.width + sizeX*2, img.height + sizeY*2)
     pg.image(img, sizeX, sizeY)
-    img = pg.get()
+    img = imagify(pg)
 
     for(var x=0; x<cols; x++) {
         var col = []
