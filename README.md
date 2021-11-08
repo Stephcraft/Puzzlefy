@@ -21,6 +21,7 @@ Generate a puzzle from any image. Made with [p5.js](https://p5js.org/).
 ### Ideas
 * `.gif` cors origin fix
 * `.gif` load time improvement
+* Dynamic loading screen
 * Draw placed pieces in separate graphics for performance
 * Random image if `image=` url parameter is not set
 * Auto solve functionality
