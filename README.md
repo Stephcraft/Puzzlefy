@@ -31,3 +31,4 @@ Generate a puzzle from any image. Made with [p5.js](https://p5js.org/).
 * Background clip area vs free pieces clip setting
 * Customize puzzle pattern (jigsaw shapes and in/out directions)
 * Customize settings (feedback when invalid placed, allow preview, ...)
+* Zoom and moving around camera controls. Useful for large puzzles and mobile devices (pinch to zoom)
