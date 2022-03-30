@@ -36,13 +36,15 @@
 		<!-- ending -->
 		<div class="ui-popup-container disabled">
 			<div class=ui-popup>
+				<!-- Thank you for playing -->
 				<div class=section>
 					<h1>Thank you for playing!</h1>
 					<p>Follow <a href="https://twitter.com/Puzzle_fy" target=_blank>@Puzzle_fy</a> on twitter</p>
 				</div>
+				<!-- Puzzle generator -->
 				<div class="section container">
 					<h2>Generate your puzzle</h2>
-					<!--<p>Make your own puzzle and share it with your friends!</p>-->
+					<p hidden>Make your own puzzle and share it with your friends!</p>
 					<input type="text" placeholder="Image link" id=url> <input type="number" placeholder="Width" min=0 id=cols> x <input type="number" placeholder="Height" min=0 id=rows>
 					<br><br>
 					<div>
@@ -51,6 +53,7 @@
 						<button type="button" class=twitter onclick="shareGenerate()"><i class="fab fa-twitter"></i></button>
 					</div>
 				</div>
+				<!-- Zombiecraft -->
 				<div id=zombiecraft>
 					<img src=https://zc.stephcraft.net/assets/image/zombiecraft-logo.png>
 					<p>Do you like Minecraft and Call of Duty zombies? If so, then join this epic Minecraft server without any mods!</p>
@@ -60,6 +63,7 @@
 						<a href="https://zc.stephcraft.net/twitter" target=_blank><button type="button" class=twitter><i class="fab fa-twitter"></i></button></a>
 					</div>
 				</div>
+				<!-- Play again -->
 				<div class=section>
 					<a id=again><button type="button">Play again</button></a>
 					<a id=share target=_blank><button type="button" class=twitter><i class="fab fa-twitter"></i></button></a>
@@ -114,6 +118,7 @@
 
 	<!-- scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+	<script src=plugins/clipboard.js></script>
 	<script src=plugins/transform.js></script>
 	<script src=plugins/cors.js></script>
 	<script src=jigsaw.js></script>

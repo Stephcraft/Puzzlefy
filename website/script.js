@@ -37,8 +37,8 @@ function setup() {
     canvas = createCanvas(windowWidth, windowHeight)
 
     // p5*js plugins
-    addScreenPositionFunction()
     // addCORSLoadImageFunction()
+    addScreenPositionFunction()
 
     prev = millis()
     
@@ -106,6 +106,7 @@ function start() {
 
     prev = millis()
 
+    // puzzle tiles generation
     tiles = puzzleify(tiles)
 
     console.log('puzzleify: ', millis() - prev)
@@ -198,12 +199,13 @@ function draw() {
         return
     }
 
-    // base
+    // scale and frame
     s = Math.min(width / img.width, height / img.height) * scl
     frame = parseInt((0.5 * frameCount) % numFrames(img))
 
     background(Theme.background)
 
+    // transform
     translate(width/2, height/2)
     scale(s)
 
