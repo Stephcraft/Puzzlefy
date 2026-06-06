@@ -73,6 +73,22 @@ button[type="button"] {
   	user-select: none; /* Standard syntax */
 }
 
+button.icon {
+    padding: 0px;
+    width: 31.33px;
+    height: 31.33px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
 .functionality {
     display: flex;
     position: relative;
@@ -128,6 +144,10 @@ button[type="button"] {
 	padding: 15px 15px;
 }
 
+#zombiecraft img {
+    width: 100%;
+}
+
 #zombiecraft div {
 	-webkit-user-select: none; /* Safari */
 	-ms-user-select: none; /* IE 10 and IE 11 */
@@ -171,14 +191,6 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-button[type="button"].copy {
-	padding: 8px 9px;
-}
-
-button[type="button"].twitter {
-	padding: 8px 9px;
-}
-
 .twitter {
 	background: #1DA1F2 !important;
 }
@@ -189,10 +201,6 @@ button[type="button"].twitter {
 
 .twitter:active {
 	background: rgb(153, 208, 243) !important;
-}
-
-button[type="button"].discord {
-	padding: 8px 8px;
 }
 
 button[type="button"].discord {
@@ -212,7 +220,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:not(:has(button)):hover {
 	text-decoration: underline;
 }
 

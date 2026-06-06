@@ -392,9 +392,12 @@ function share() {
 }
 
 function toggleFullscreen(self) {
-    const classList = self.querySelector('i').classList
-    classList.toggle('fa-expand')
-    classList.toggle('fa-compress')
+    // const classList = self.querySelector('iconify-icon').classList
+    // classList.toggle('fa-expand')
+    // classList.toggle('fa-compress')
+    const icon = self.querySelector('iconify-icon')
+    const state = icon.getAttribute('icon')
+    icon.setAttribute('icon', state == 'fa-expand' ? 'fa-compress' : 'fa-expand')
     const tooltip = self.parentElement.querySelector('.tooltip-content')
     tooltip.innerText = tooltip.innerText == 'Fullscreen' ? 'Windowed' : 'Fullscreen'
     fullscreen(!fullscreen())
