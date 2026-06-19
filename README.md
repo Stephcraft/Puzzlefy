@@ -9,16 +9,17 @@ Generate a puzzle from any image. Made with [p5.js](https://p5js.org/).
 
 ![](demo.gif)
 
-### Make your own puzzle
-`https://puzzlefy.netlify.app/?image=<url>&cols=<number>&rows=<number>`
-- **image**: link to an image url `.jpg`, `.png`... and also certain `.gif`s!
-- **cols**: width of puzzle in pieces
-- **rows**: height of puzzle in pieces
+## 🧩 Make your own puzzle
+`https://puzzlefy.netlify.app/?image={url}&cols={number}&rows={number}`
+- **image** `url`: link to an image url `.jpg`, `.png`... and also certain `.gif`s!
+- **cols** `number`: width of puzzle in pieces
+- **rows** `number`: height of puzzle in pieces
 
 > If the **cols** and **rows** parameters are not specified, the aspect ratio of the image will be used instead
 
-### Example
+### Examples
 - [Obama prism](https://puzzlefy.netlify.app/?image=https://c.tenor.com/1g50P-G_JicAAAAC/obama-triangle.gif&cols=4&rows=4)
+- [Processing](https://puzzlefy.netlify.app/?image=https://canada1.discourse-cdn.com/flex036/uploads/processingfoundation1/original/3X/8/9/899b53d84f374433d5d14317bc07e1b95799b5b4.png&cols=6&rows=4)
 
 <!--
 |<img src=https://github.com/Rush/Font-Awesome-SVG-PNG/blob/master/black/svg/globe.svg height=14> [Website](https://puzzlefy.netlify.app) | <img src='https://i.imgur.com/J7kgFUd.png' height=14> [X/Twitter](https://twitter.com/Puzzle_fy)|
