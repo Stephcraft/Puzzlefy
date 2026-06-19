@@ -1,11 +1,11 @@
 # Puzzlefy
+[![X Follow](https://img.shields.io/static/v1?style=flat&logo=x&logoColor=ffffff&color=black&labelColor=black&message=Follow+@Puzzle_fy&label=)](https://x.com/Puzzle_fy)
 [![p5.js](https://img.shields.io/static/v1?style=flat&logo=p5dotjs&label=&message=p5.js&logoColor=white&labelColor=333&color=444)](https://p5js.org)
 [![Itch.io](https://img.shields.io/static/v1?style=flat&logo=itchdotio&label=&message=Available+on+Itch.io&logoColor=white&labelColor=FA5C5C&color=FA5C5C)](https://stephcraft.itch.io/puzzlefy)
 
 Generate a puzzle from any image. Made with [p5.js](https://p5js.org/).
 
 ## 🕹️ [Play in browser](https://puzzlefy.stephcraft.net)
-[![X Follow](https://img.shields.io/static/v1?style=flat&logo=x&logoColor=ffffff&color=black&labelColor=black&message=Follow+@Puzzle_fy&label=)](https://x.com/Puzzle_fy)
 
 ![](demo.gif)
 
