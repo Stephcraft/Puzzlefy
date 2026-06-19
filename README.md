@@ -4,12 +4,12 @@
 
 Generate a puzzle from any image. Made with [p5.js](https://p5js.org/).
 
+## 🕹️ [Play in browser](https://puzzlefy.stephcraft.net)
+[![X Follow](https://img.shields.io/static/v1?style=flat&logo=x&logoColor=ffffff&color=black&labelColor=black&message=Follow+@Puzzle_fy&label=)](https://x.com/Puzzle_fy)
+
 ![](demo.gif)
 
-|<img src=https://github.com/Rush/Font-Awesome-SVG-PNG/blob/master/black/svg/globe.svg height=14> [Website](https://puzzlefy.netlify.app) | <img src='https://i.imgur.com/J7kgFUd.png' height=14> [X/Twitter](https://twitter.com/Puzzle_fy)|
-|---|---|
-
-### Usage
+### Make your own puzzle
 `https://puzzlefy.netlify.app/?image=<url>&cols=<number>&rows=<number>`
 - **image**: link to an image url `.jpg`, `.png`... and also certain `.gif`s!
 - **cols**: width of puzzle in pieces
@@ -20,7 +20,15 @@ Generate a puzzle from any image. Made with [p5.js](https://p5js.org/).
 ### Example
 - [Obama prism](https://puzzlefy.netlify.app/?image=https://c.tenor.com/1g50P-G_JicAAAAC/obama-triangle.gif&cols=4&rows=4)
 
-### Ideas
+<!--
+|<img src=https://github.com/Rush/Font-Awesome-SVG-PNG/blob/master/black/svg/globe.svg height=14> [Website](https://puzzlefy.netlify.app) | <img src='https://i.imgur.com/J7kgFUd.png' height=14> [X/Twitter](https://twitter.com/Puzzle_fy)|
+|---|---|
+-->
+
+## ⌨️ Edit the code
+[<img height="48" alt="OpenP5Sketch" src="https://github.com/user-attachments/assets/69f7d662-1407-410b-9572-cb2c4ae6e79a" />](https://codesandbox.io/p/sandbox/github/Stephcraft/Puzzlefy/tree/main/website?file=/script.js)
+
+### Feature ideas
 * `.gif` cors origin fix ― [**Issue**](https://github.com/Stephcraft/Puzzlefy/issues/1)
 * `.gif` load time improvement ― [**Issue**](https://github.com/Stephcraft/Puzzlefy/issues/3)
 * Dynamic loading screen ― [**Issue**](https://github.com/Stephcraft/Puzzlefy/issues/2)
